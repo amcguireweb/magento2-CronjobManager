@@ -16,28 +16,22 @@
 				<item name="class" xsi:type="string">primary</item>
 				<item name="url" xsi:type="string">*/manage/create</item>
 			</item>
-            <item name="dashboard" xsi:type="array">
-				<item name="name" xsi:type="string">dashboard</item>
-				<item name="label" xsi:type="string" translate="true">Dashboard</item>
-				<item name="class" xsi:type="string">dashboard</item>
-				<item name="url" xsi:type="string">*/manage/</item>
-			</item>
-            <item name="config" xsi:type="array">
-				<item name="name" xsi:type="string">config</item>
-				<item name="label" xsi:type="string" translate="true">Job Configuration</item>
-				<item name="class" xsi:type="string">secondary</item>
-				<item name="url" xsi:type="string">*/config/index</item>
-			</item>
-            <item name="timeline" xsi:type="array">
+            		<item name="timeline" xsi:type="array">
 				<item name="name" xsi:type="string">timeline</item>
 				<item name="label" xsi:type="string" translate="true">Timeline</item>
 				<item name="class" xsi:type="string">secondary</item>
 				<item name="url" xsi:type="string">*/timeline/index</item>
 			</item>
-            <item name="system" xsi:type="array">
+			<item name="config" xsi:type="array">
+                		<item name="name" xsi:type="string">config</item>
+                		<item name="label" xsi:type="string" translate="true">Job Configuration</item>
+                		<item name="class" xsi:type="string">secondary</item>
+                		<item name="url" xsi:type="string">*/config/index</item>
+            		</item>
+            		<item name="system" xsi:type="array">
 				<item name="name" xsi:type="string">system</item>
 				<item name="label" xsi:type="string" translate="true">System Configurations</item>
-				<item name="class" xsi:type="string">secondary</item>
+				<item name="class" xsi:type="string">link</item>
 				<item name="url" xsi:type="string">adminhtml/system_config/edit/section/system</item>
 			</item>
 		</item>
@@ -150,7 +144,7 @@
 			<argument name="data" xsi:type="array">
 				<item name="options" xsi:type="object">EthanYehuda\CronjobManager\Model\Schedule\Source\Schedule</item>
 				<item name="config" xsi:type="array">
-					<item name="filter" xsi:type="string">textWithDatalist</item>
+					<item name="filter" xsi:type="string">select</item>
 					<item name="dataType" xsi:type="string">select</item>
 					<item name="label" xsi:type="string" translate="true">Job Code</item>
 					<item name="draggable" xsi:type="boolean">false</item>
@@ -163,7 +157,7 @@
 				<item name="config" xsi:type="array">
 					<item name="dataType" xsi:type="string">select</item>
 					<item name="draggable" xsi:type="boolean">false</item>
-					<item name="filter" xsi:type="string">textWithDatalist</item>
+					<item name="filter" xsi:type="string">select</item>
 					<item name="label" xsi:type="string" translate="true">Group</item>
 					<item name="sortable" xsi:type="boolean">true</item>
 				</item>
