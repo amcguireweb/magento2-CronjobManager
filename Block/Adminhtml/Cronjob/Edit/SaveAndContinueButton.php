@@ -9,9 +9,9 @@ class SaveAndContinueButton extends GenericButton implements ButtonProviderInter
     /**
      * @inheritDoc
      */
-    public function getButtonData()
+    public function getButtonData(): array
     {
-        $data = [
+        return [
             'label' => __('Save and Continue'),
             'class' => 'save',
             'data_attribute' => [
@@ -21,6 +21,5 @@ class SaveAndContinueButton extends GenericButton implements ButtonProviderInter
             ],
             'sort_order' => 90,
         ];
-        return $data;
     }
 }
