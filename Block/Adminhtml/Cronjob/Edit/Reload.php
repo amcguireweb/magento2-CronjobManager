@@ -9,9 +9,9 @@ class Reload extends GenericButton implements ButtonProviderInterface
     /**
      * @inheritDoc
      */
-    public function getButtonData()
+    public function getButtonData(): array
     {
-        $data = [
+        return [
             'label' => __('Reload'),
             'class' => 'primary',
             'on_click' => "require('uiRegistry')
@@ -19,6 +19,5 @@ class Reload extends GenericButton implements ButtonProviderInterface
                 .reloader()",
             'sort_order' => 5,
         ];
-        return $data;
     }
 }
