@@ -3,6 +3,8 @@
 namespace EthanYehuda\CronjobManager\Controller\Adminhtml\Config;
 
 use Magento\Backend\Model\View\Result\Page;
+use Magento\Framework\App\ResponseInterface;
+use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Backend\App\Action;
@@ -25,7 +27,7 @@ class Index extends Action
     /**
      * @inheritDoc
      */
-    public function execute()
+    public function execute(): ResultInterface|ResponseInterface|Page
     {
         /** @var Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
