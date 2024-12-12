@@ -9,7 +9,7 @@ class DeleteButton extends GenericButton implements ButtonProviderInterface
     /**
      * @inheritDoc
      */
-    public function getButtonData()
+    public function getButtonData(): array
     {
         $params = $this->getRequestParams();
         $cronId = $params['id'];
