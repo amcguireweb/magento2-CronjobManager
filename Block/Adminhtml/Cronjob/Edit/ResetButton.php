@@ -9,14 +9,13 @@ class ResetButton extends GenericButton implements ButtonProviderInterface
     /**
      * @inheritDoc
      */
-    public function getButtonData()
+    public function getButtonData(): array
     {
-        $data = [
+        return [
             'label' => __('Reset'),
             'class' => 'reset',
             'on_click' => 'location.reload();',
             'sort_order' => 30,
         ];
-        return $data;
     }
 }
