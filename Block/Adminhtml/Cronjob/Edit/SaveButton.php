@@ -9,9 +9,9 @@ class SaveButton extends GenericButton implements ButtonProviderInterface
     /**
      * @inheritDoc
      */
-    public function getButtonData()
+    public function getButtonData(): array
     {
-        $data = [
+        return [
             'label' => __('Save'),
             'class' => 'save primary',
             'data_attribute' => [
@@ -21,6 +21,5 @@ class SaveButton extends GenericButton implements ButtonProviderInterface
                 'form-role' => 'save',
             ],
         ];
-        return $data;
     }
 }
