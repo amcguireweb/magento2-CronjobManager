@@ -31,7 +31,7 @@ class Save extends Action
      *
      * @return void
      */
-    public function execute()
+    public function execute(): void
     {
         $params = $this->getRequest()->getParams();
         $jobCode = $params['job_code'] ?: null;
