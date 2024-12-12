@@ -31,7 +31,7 @@ class RestoreSystemDefault extends Action
      *
      * @return void
      */
-    public function execute()
+    public function execute(): void
     {
         $params = $this->getRequest()->getParams();
         $jobCode = isset($params['job_code']) ? $params['job_code'] : null;
