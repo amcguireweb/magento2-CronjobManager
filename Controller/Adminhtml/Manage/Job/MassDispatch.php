@@ -6,6 +6,7 @@ use EthanYehuda\CronjobManager\Model\ResourceModel\Schedule\CollectionFactory;
 use EthanYehuda\CronjobManager\Model\ScheduleManagement;
 use Magento\Backend\App\Action\Context;
 use Magento\Backend\App\Action;
+use Magento\Framework\Exception\LocalizedException;
 use Magento\Ui\Component\MassAction\Filter;
 
 class MassDispatch extends Action
@@ -31,8 +32,9 @@ class MassDispatch extends Action
      * Schedule a new run of each selected jobcode
      *
      * @return void
+     * @throws LocalizedException
      */
-    public function execute()
+    public function execute(): void
     {
         $collection = $this->filter->getCollection($this->collectionFactory->create());
         if ($collection->getSize() < 1) {
