@@ -26,7 +26,7 @@ class Kill extends AbstractAction
      *
      * @return void
      */
-    public function execute()
+    public function execute(): void
     {
         $jobId = (int)$this->getRequest()->getParam('id');
         $jobCode = $this->getRequest()->getParam('job_code');
