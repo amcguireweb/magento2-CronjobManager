@@ -12,7 +12,7 @@ class GenericButton
     /**
      * @var UrlInterface
      */
-    protected $urlBuilder;
+    protected UrlInterface $urlBuilder;
 
     /**
      * @param Context $context
