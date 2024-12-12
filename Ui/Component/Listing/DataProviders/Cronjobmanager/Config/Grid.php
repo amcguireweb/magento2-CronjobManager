@@ -13,42 +13,42 @@ class Grid extends AbstractDataProvider
     /**
      * @var int
      */
-    private $pageSize = 20;
+    private int $pageSize = 20;
 
     /**
      * @var int
      */
-    private $pageNum = 1;
+    private int $pageNum = 1;
 
     /**
      * @var string
      */
-    private $sortedColumn = 'job_code';
+    private string $sortedColumn = 'job_code';
 
     /**
      * @var string
      */
-    private $sortDirection = '';
+    private string $sortDirection = '';
 
     /**
      * @var array
      */
-    private $records = [];
+    private array $records = [];
 
     /**
      * @var Manager $manager
      */
-    private $manager;
+    private Manager $manager;
 
     /**
-     * @var Array
+     * @var array
      */
-    private $filterRegistry = [];
+    private array $filterRegistry = [];
 
     /**
      * Used to point to current filter
      *
-     * @var Array
+     * @var array
      */
     private $currentFilter;
 
@@ -101,7 +101,7 @@ class Grid extends AbstractDataProvider
      *
      * @return void
      */
-    public function setLimit($offset, $size)
+    public function setLimit($offset, $size): void
     {
         $this->pageSize = $size;
         $this->pageNum = $offset;
@@ -112,8 +112,10 @@ class Grid extends AbstractDataProvider
      *
      * @param string $col
      * @param string $dir
+     *
+     * @return void
      */
-    public function addOrder($col, $dir)
+    public function addOrder($col, $dir): void
     {
         $this->sortedColumn = $col;
         $this->sortDirection = strtolower($dir);
@@ -158,7 +160,7 @@ class Grid extends AbstractDataProvider
      *
      * @return void
      */
-    private function prepareJobConfigRecords()
+    private function prepareJobConfigRecords(): void
     {
         $this->records = [
             'totalRecords' => 0,
@@ -223,7 +225,7 @@ class Grid extends AbstractDataProvider
      *
      * @return void
      */
-    private function filterRecords()
+    private function filterRecords(): void
     {
         foreach ($this->filterRegistry as $filter) {
             $this->currentFilter = $filter;
