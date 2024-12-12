@@ -13,7 +13,7 @@ class Timeline extends AbstractComponent
      *
      * @return string
      */
-    public function getComponentName()
+    public function getComponentName(): string
     {
         return static::NAME;
     }
@@ -21,7 +21,7 @@ class Timeline extends AbstractComponent
     /**
      * @inheritdoc
      */
-    public function getDataSourceData()
+    public function getDataSourceData(): array
     {
         return ['data' => $this->getContext()->getDataProvider()->getData()];
     }
