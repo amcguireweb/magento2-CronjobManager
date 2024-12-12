@@ -8,12 +8,14 @@
     <preference for="EthanYehuda\CronjobManager\Api\Data\ScheduleInterface" type="EthanYehuda\CronjobManager\Model\Data\Schedule" />
     <preference for="EthanYehuda\CronjobManager\Model\ClockInterface" type="EthanYehuda\CronjobManager\Model\SystemClock" />
     <preference for="EthanYehuda\CronjobManager\Model\ErrorNotificationInterface" type="EthanYehuda\CronjobManager\Model\ErrorNotificationEmail" />
+    
     <virtualType name="Magento\Cron\Model\ResourceModel\Schedule\Virtual\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
             <argument name="mainTable" xsi:type="string">cron_schedule</argument>
             <argument name="resourceModel" xsi:type="string">Magento\Cron\Model\ResourceModel\Schedule</argument>
         </arguments>
     </virtualType>
+    
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
@@ -21,6 +23,7 @@
             </argument>
         </arguments>
     </type>
+    
     <type name="Magento\Framework\Console\CommandList">
         <arguments>
             <argument name="commands" xsi:type="array">
