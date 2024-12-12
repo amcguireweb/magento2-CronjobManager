@@ -26,7 +26,7 @@ class ProcessCronQueueObserverPlugin
      *
      * @return array
      */
-    public function beforeExecute(ProcessCronQueueObserver $subject, Observer $observer)
+    public function beforeExecute(ProcessCronQueueObserver $subject, Observer $observer): array
     {
         $this->eventManager->dispatch("process_cron_queue_before", ["queue" => $subject]);
 
