@@ -31,7 +31,7 @@ class Edit extends Action
      *
      * @return Page
      */
-    public function execute()
+    public function execute(): Page
     {
         // Register cronjob information for later use
         $this->coreRegistry->register(
