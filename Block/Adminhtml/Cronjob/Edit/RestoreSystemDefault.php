@@ -9,11 +9,11 @@ class RestoreSystemDefault extends GenericButton implements ButtonProviderInterf
     /**
      * @inheritDoc
      */
-    public function getButtonData()
+    public function getButtonData(): array
     {
         $params = $this->getRequestParams();
         unset($params['key'], $params['form_key']);
-        $data = [
+        return [
             'label' => __('Restore System Default'),
             'class' => 'secondary',
             'on_click' => 'deleteConfirm(\''
@@ -23,6 +23,5 @@ class RestoreSystemDefault extends GenericButton implements ButtonProviderInterf
             . '\')',
             'sort_order' => 5,
         ];
-        return $data;
     }
 }
