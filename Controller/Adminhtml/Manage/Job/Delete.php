@@ -27,7 +27,7 @@ class Delete extends Action
      *
      * @return void
      */
-    public function execute()
+    public function execute(): void
     {
         $jobId = $this->getRequest()->getParam('id');
         try {
