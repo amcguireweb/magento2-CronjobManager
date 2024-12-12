@@ -8,7 +8,7 @@
                 <field id="clean_running_schedule" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
                     <label>Clean schedule of missing processes</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment>If a process has status "running", but there is no corresponding process alive on the server, the job will be set to "error". This prevents buildup of false "running" jobs.</comment>
+                    <tooltip>If a process has status "running", but there is no corresponding process alive on the server, the job will be set to "error". This prevents buildup of false "running" jobs.</tooltip>
                 </field>
                 <field id="email_notification" translate="label comment" type="select" sortOrder="100" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
                     <label>Send notification email if job has error</label>
@@ -23,7 +23,7 @@
                 </field>
                 <field id="email_recipients" translate="label comment" type="text" sortOrder="120" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
                     <label>Email recipients</label>
-                    <comment>Comma separeted email addresses</comment>
+                    <tooltip>Comma separated email addresses</tooltip>
                     <depends>
                         <field id="email_notification">1</field>
                     </depends>
