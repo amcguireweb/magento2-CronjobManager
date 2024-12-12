@@ -12,7 +12,7 @@ class Save extends Action
     public const ADMIN_RESOURCE = "EthanYehuda_CronjobManager::cronjobmanager";
 
     /**
-     * @param \Magento\Backend\App\Action\Context $context
+     * @param Context $context
      * @param Manager $cronJobManager
      */
     public function __construct(
@@ -27,7 +27,7 @@ class Save extends Action
      *
      * @return void
      */
-    public function execute()
+    public function execute(): void
     {
         $params = $this->getRequest()->getParams();
         $jobId = $params['schedule_id'] ? $params['schedule_id'] : null;
