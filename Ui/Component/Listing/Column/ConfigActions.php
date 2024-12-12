@@ -14,7 +14,7 @@ class ConfigActions extends Column
      *
      * @throws NotFoundException
      */
-    public function prepareDataSource(array $dataSource)
+    public function prepareDataSource(array $dataSource): array
     {
         if (isset($dataSource["data"]["items"])) {
             foreach ($dataSource["data"]["items"] as & $item) {
