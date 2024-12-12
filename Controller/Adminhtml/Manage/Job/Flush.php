@@ -27,7 +27,7 @@ class Flush extends Action
      *
      * @return void
      */
-    public function execute()
+    public function execute(): void
     {
         try {
             $this->cronJobManager->flushCrons();
