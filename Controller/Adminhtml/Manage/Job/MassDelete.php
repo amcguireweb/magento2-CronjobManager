@@ -4,6 +4,7 @@ namespace EthanYehuda\CronjobManager\Controller\Adminhtml\Manage\Job;
 
 use EthanYehuda\CronjobManager\Model\ManagerFactory;
 use EthanYehuda\CronjobManager\Model\ResourceModel\Schedule\CollectionFactory;
+use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Backend\App\Action;
@@ -33,8 +34,9 @@ class MassDelete extends Action
      * Save cronjob
      *
      * @return void
+     * @throws LocalizedException
      */
-    public function execute()
+    public function execute(): void
     {
         $manager = $this->managerFactory->create();
         $collection = $this->filter->getCollection($this->collectionFactory->create());
