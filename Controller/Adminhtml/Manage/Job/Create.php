@@ -27,7 +27,7 @@ class Create extends Action
      *
      * @return void
      */
-    public function execute()
+    public function execute(): void
     {
         $jobCode = $this->getRequest()->getParam('job_code');
         $scheduledAt = $this->getRequest()->getParam('scheduled_at');
