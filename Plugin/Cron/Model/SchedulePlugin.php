@@ -7,6 +7,8 @@ namespace EthanYehuda\CronjobManager\Plugin\Cron\Model;
 use Magento\Cron\Model\ResourceModel\Schedule as ScheduleResource;
 use Magento\Cron\Model\Schedule;
 use Magento\Framework\Exception\AlreadyExistsException;
+use function gethostname;
+use function getmypid;
 
 class SchedulePlugin
 {
@@ -30,8 +32,8 @@ class SchedulePlugin
     public function afterTryLockJob(Schedule $subject, bool $result)
     {
         if ($result) {
-            $subject->setData('hostname', \gethostname());
-            $subject->setData('pid', \getmypid());
+            $subject->setData('hostname', gethostname());
+            $subject->setData('pid', getmypid());
             $this->scheduleResource->save($subject);
         }
 
