@@ -72,7 +72,7 @@ class ScheduleRepositoryAdapter implements ScheduleRepositoryAdapterInterface
     /**
      * @inheritDoc
      */
-    public function getByStatus($status)
+    public function getByStatus($status): array
     {
         $searchCriteria = $this->searchCriteriaBuilder->addFilter('status', $status)->create();
         return $this->getList($searchCriteria)->getItems();
