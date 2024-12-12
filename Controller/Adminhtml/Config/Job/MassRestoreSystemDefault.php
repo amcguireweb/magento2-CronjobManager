@@ -31,7 +31,7 @@ class MassRestoreSystemDefault extends Action
      *
      * @return void
      */
-    public function execute()
+    public function execute(): void
     {
         $params = $this->getRequest()->getParam('selected');
         if (!isset($params)) {
