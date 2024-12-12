@@ -2,6 +2,7 @@
 
 namespace EthanYehuda\CronjobManager\Controller\Adminhtml\Manage;
 
+use Magento\Backend\Model\View\Result\Page;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Backend\App\Action;
@@ -11,8 +12,8 @@ class Index extends Action
     public const ADMIN_RESOURCE = "EthanYehuda_CronjobManager::cronjobmanager";
 
     /**
-     * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
-     * @param \Magento\Backend\App\Action\Context $context
+     * @param PageFactory $resultPageFactory
+     * @param Context $context
      */
     public function __construct(
         protected PageFactory $resultPageFactory,
@@ -24,11 +25,11 @@ class Index extends Action
     /**
      * Product list page
      *
-     * @return \Magento\Backend\Model\View\Result\Page
+     * @return Page
      */
-    public function execute()
+    public function execute(): Page
     {
-        /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
+        /** @var Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('EthanYehuda_CronjobManager::cronjobmanager');
         $resultPage->getConfig()->getTitle()->prepend(__('Cron Job Dashboard'));
